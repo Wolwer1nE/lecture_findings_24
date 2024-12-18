@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaderboard 2024</title>
+    <meta charset="UTF-8">
+    <link href="/index.8ab5a5fa.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/index.975ef6c8.js" defer=""></script>
+</head>
+
+<body class="px-2">
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-4xl mt-4 font-bold tracking-tight text-blue-700 sm:text-6xl">
+
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-gray-300">
+
+        </p>
+    </div>
+<ul id="studentsList" role="list" class="">
+    <li v-for="student in students" class="flex gap-x-4 py-5 lg:mt-2">
+        <img class="h-32 w-32 lg:h-12 lg:w-12 flex-none rounded-full bg-gray-50" :src="student.avatarUrl" alt="">
+        <div class="min-w-0 h-32 lg:h-12 flex flex-col lg:flex-none  justify-center lg:justify-start ">
+            <div>
+                <p class="lg:text-lg text-2xl font-semibold leading-6 text-gray-900">
+                    {{student.name}}
+                </p>
+
+            </div>
+            <div>
+                <p class="mt-1 lg:mt-0 lg:text-lg text-2xl leading-5 text-gray-500">
+                    Работ сдано: {{student.scores.length}}</p>
+            </div>
+            <div>
+                <p class="mt-1 lg:mt-0 lg:pb:2  lg:text-lg text-2xl leading-5 text-gray-500">
+                    Сумма баллов:
+                    {{student.totalScore}}
+                </p>
+            </div>
+        </div>
+    </li>
+</ul>
+</div>
+</body>
+</html>
